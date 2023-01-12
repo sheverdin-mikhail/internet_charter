@@ -1,0 +1,156 @@
+Команды для deploy django
+Создание пользователя
+---------------------
+adduser username
+usermod -aG sudo username
+group username
+su username
+---------------------------------------
+Библиотеки для Python
+----------------------
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev
+sudo apt-get install -y libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm
+sudo apt-get install -y libncurses5-dev  libncursesw5-dev xz-utils tk-dev
+
+-----------------------------------------
+Создание базы данных
+--------------------
+sudo -u postgres psql
+CREATE DATABASE db_internet_charter;
+CREATE USER internet_charter_admin WITH PASSWORD 'wqfw214fewWqdw';
+ALTER ROLE internet_charter_admin SET client_encoding TO 'utf8';
+ALTER ROLE internet_charter_admin SET default_transaction_isolation TO 'read committed';
+ALTER ROLE internet_charter_admin SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE db_internet_charter TO internet_charter_admin;
+\q
+
+----------------------------------------
+Установка Gunicorn
+------------------
+gunicorn qr_tatu.qr_tatu.wsgi:application --bind 65.108.6.111:8000
+----------------------------------------
+Настрока nginx
+--------------
+server {
+    listen 80;
+    server_name 65.108.6.111; # здесь прописать или IP-адрес или доменное имя сервера
+    access_log  /var/log/nginx/example.log;
+ 
+    location /static/ {
+        root /home/user/qr_tatu;
+        expires 30d;
+    }
+ 
+    location /media/ {
+        root /home/user/qr_tatu;
+        expires 30d;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:8000; 
+        proxy_set_header Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+sudo service nginx restart
+
+------------------------------------------
+For SSL
+-------
+map $sent_http_content_type $expires {
+    "text/html"                 epoch;
+    "text/html; charset=utf-8"  epoch;
+    default                     off;
+}
+server {
+    listen 80;
+    server_name www.django.com;
+    return 301 https://django.com$request_uri;
+}
+server{
+    listen 443 ssl;
+    ssl on;                                      
+    ssl_certificate /etc/ssl/django.crt;     
+    ssl_certificate_key /etc/ssl/django.key; 
+    server_name django.com;
+    client_max_body_size 100M;
+
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_http_version 1.1;
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript;
+
+    location /static/ {
+        root /home/user/pj;
+        expires 1d;
+    }
+
+    location /media/ {
+        root /home/user/pj;
+        expires 1d;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+---------------------------------------
+Настройка supervisor
+cd /etc/supervisor/conf.d/
+sudo update-rc.d supervisor enable
+sudo service supervisor start
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl status project
+sudo supervisorctl restart project
+--------------------
+@kiri3914
+kiri3914 commented on 30 Jul
+
+thanks
+@Korwys
+Korwys commented 26 days ago
+
+От души!
+@SememN
+SememN commented 5 days ago
+
+Спасибо, хорошая шпаргалка!
+@msheverdin648
+Add heading text
+Add bold text, <Ctrl+b>
+Add italic text, <Ctrl+i>
+Add a quote, <Ctrl+Shift+.>
+Add code, <Ctrl+e>
+Add a link, <Ctrl+k>
+Add a bulleted list, <Ctrl+Shift+8>
+Add a numbered list, <Ctrl+Shift+7>
+Add a task list, <Ctrl+Shift+l>
+Directly mention a user or team
+Reference an issue or pull request
+Attach files by dragging & dropping, selecting or pasting them.
+Styling with Markdown is supported
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+You have no unread notifications
