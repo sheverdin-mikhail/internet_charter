@@ -1,31 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser  
-from django.contrib.auth.validators import UnicodeUsernameValidator
-
-
-class CustomUser(AbstractUser):
-    
-
-    username_validator = UnicodeUsernameValidator
-    username = models.CharField(
-        ('username'),
-        max_length=150,
-        blank=True,
-        null=True,
-        help_text=('Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.'),
-        validators=[username_validator],
-        error_messages={
-            'unique': ("A user with that username already exists."),
-        },
-    )
-    email = models.EmailField(
-        ('email address'),
-        unique=True,
-    )
-    email_verify = models.BooleanField(default=False)
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
-
 
 
 
@@ -98,5 +71,7 @@ class Step(models.Model):
     description = models.CharField(("Описание этапа"), max_length=255, blank=True, null=True)
     theory = models.TextField(("Теория этапа"))
     test = models.ForeignKey("api.Test", verbose_name=("Тест"), on_delete=models.CASCADE)
+
+
 
 

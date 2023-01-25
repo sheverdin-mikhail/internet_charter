@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'djoser',
     'ckeditor',
     'ckeditor_uploader',
+    'drf_yasg',
     
     'api'
 ]
@@ -124,7 +125,20 @@ STATICFIELS_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'api.CustomUser'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #CKEditor configs
@@ -203,6 +217,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
 }
 
 
@@ -213,6 +230,7 @@ DJOSER = {
     'ACTIVATION_URL': '#/activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {},
+    'LOGIN_FIELD': 'email',
 }
 
 
