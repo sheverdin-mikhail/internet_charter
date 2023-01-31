@@ -31,7 +31,7 @@
 
     --font-size-h1: 26px;
     --font-line-h1: 34px;
-    --font-weight-h1: 600;
+    --font-weight-h1: 800;
     --font-h1: var(--font-weight-h1) var(--font-size-h1) / var(--font-line-h1) var(--font-family) ;
 
     --font-size-h2: 20px;

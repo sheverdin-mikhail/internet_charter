@@ -1,7 +1,7 @@
 import React from 'react'
 import { Main, MainNavigation } from '../../../../modules/Main'
 
-export const ProgressPage = () => {
+export const TestsPage = () => {
   return (
     <Main>
       <MainNavigation />

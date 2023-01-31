@@ -7,7 +7,7 @@ const BorderButton = ({children, dark, ...props}) => {
 
 
   return (
-    <button className={ClassNames(cls.btn, {}, [dark ? cls.dark : cls.light])} {...props}>
+    <button className={[ClassNames(cls.btn, {}, [dark ? cls.dark : cls.light]), ...props.classes].join(' ')} {...props}>
       {children}
     </button>
   )
