@@ -1,0 +1,1 @@
+export {TestsPage} from './components/TestsPage/TestsPage'

@@ -1,0 +1,29 @@
+.btn{
+    font: var(--font-h2);
+    border-radius: 12px;
+    padding: 12px 40px;
+    cursor: pointer;
+}
+
+.btn.dark{
+    border: 6px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background: var(--main-color);
+}
+
+.btn.light{
+    border: 6px solid var(--main-color);
+    color: var(--main-color);
+    background: var(--secondary-color);
+}
+
+.btn.dark:hover{
+    background: var(--secondary-color);
+    color: var(--main-color);
+}
+
+.btn.light:hover{
+    background: var(--main-color);
+    color: var(--secondary-color) ;
+}
+

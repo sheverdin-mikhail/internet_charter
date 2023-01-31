@@ -1,0 +1,5 @@
+.year{
+    font: var(--font-h3);
+    font-weight: 500;
+    color: var(--main-light-color);
+}
