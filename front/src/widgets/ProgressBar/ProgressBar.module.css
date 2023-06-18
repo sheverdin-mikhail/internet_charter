@@ -1,0 +1,19 @@
+.progressBar {
+    display: flex;
+    border-radius: 8px;
+    background: #F3C301;
+}
+
+.label {
+    flex: 1 1 auto;
+    padding: 3px 0;
+    font: var(--font-h2);
+    text-align: center;
+    color: transparent;
+}
+
+.label.active {
+    background: var(--main-color);
+    color: var(--secondary-color);
+    border-radius: 8px;
+}

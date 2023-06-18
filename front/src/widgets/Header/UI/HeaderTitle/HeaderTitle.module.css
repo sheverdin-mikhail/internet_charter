@@ -1,0 +1,11 @@
+.HeaderTitle{
+    font: var(--font-h2);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.HeaderTitle:hover{
+    text-decoration: underline;
+}

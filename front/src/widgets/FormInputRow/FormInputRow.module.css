@@ -1,0 +1,13 @@
+.FormInputRow {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.label {
+    font: var(--font-h2);
+    font-weight: 500;
+    margin-left: 22px;
+    margin-bottom: 8px;
+    color: var(--main-color);
+}

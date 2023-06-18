@@ -1,0 +1,35 @@
+.title {
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font: var(--font-h1);
+    font-style: 30px;
+    color: var(--secondary-color);
+    margin-bottom: 26px;
+}
+
+.button {
+    display: block;
+    margin: 30px auto 15px auto;
+}
+
+.text {
+    font: var(--font-h2);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+
+.row:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 'text-decoration' 1s ;
+}
+
+.link:hover {
+    text-decoration: none;
+}

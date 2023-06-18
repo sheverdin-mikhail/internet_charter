@@ -1,0 +1,102 @@
+.chosePopup {
+    position: relative;
+    display: flex;
+    padding: 55px;
+    background: var(--main-color);
+    border-radius: 24px;
+}
+
+
+.role {
+    font: var(--font-h1);
+    color: var(--secondary-color);
+    margin-bottom: 70px;
+    font-weight: 600;
+}
+
+.list {
+    color: var(--secondary-color);
+    font: var(--font-h2);
+    font-size: 22px;
+    margin-bottom: -47px;
+}
+
+.item {
+    display: block;
+    position: relative;
+    padding-left: 58px;
+    margin-bottom: 47px;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url('shared/assets/icons/check-icon.svg');
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 65px;
+}
+
+.button {
+    margin-top: 80px;
+}
+
+.firstBlock {
+    border-right: 2px solid var(--secondary-color);
+}
+
+@media screen and (max-width: 1440px) {
+    .block {
+        padding: 0 35px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .block {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .chosePopup::before {
+        display: none;
+    }   
+}
+
+@media screen and (max-width: 1000px) {
+    .chosePopup {
+        position: absolute;
+        top: 0;
+        border-radius: 0;
+        flex-direction: column;
+        overflow: hidden;
+    }   
+
+    .block {
+        padding: 35px 0;
+    }
+
+    .firstBlock {
+        border-right: none;
+        border-bottom: 2px solid var(--secondary-color);
+
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .chosePopup {
+        width: 100%;
+        padding: 25px;
+    }   
+}

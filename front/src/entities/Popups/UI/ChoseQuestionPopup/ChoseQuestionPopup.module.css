@@ -1,0 +1,58 @@
+.choseQuestionPopup {
+    min-width: 65vw;
+    max-height: 70vh;
+}
+.choseQuestionPopup::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 277px;
+    height: 235px;
+    bottom: 0;
+    left: 0;
+    transform: translate(-35%, 50%);
+    background: url('shared/assets/img/fox.png') center no-repeat;
+}
+
+.card {
+    display: flex;
+    background: var(--secondary-color);
+    align-items: center;
+    font: var(--font-h2);
+    color: var(--main-color);
+    padding: 25px 15px;
+    border-radius: 24px;
+}
+
+.card:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.cards {
+    overflow: auto;
+    padding-right: 50px;
+}
+
+.cards::-webkit-scrollbar {
+    width: 8px; /* ширина скроллбара */
+  }
+  
+/* дорожка скроллбара */
+.cards::-webkit-scrollbar-track {
+background-color: var(--main-color); /* белый цвет дорожки */
+}
+
+/* скроллбар */
+.cards::-webkit-scrollbar-thumb {
+background-color: var(--secondary-color); /* основной цвет скролла */
+border-radius: 6px; /* скругление краев */
+}
+
+.question {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.question:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,1 @@
+export { TestingTable } from "./UI/TestingTable/TestingTable";

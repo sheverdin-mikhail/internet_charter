@@ -1,0 +1,73 @@
+.smallTestCard {
+    display: flex;
+    background: var(--main-color);
+    padding: 26px 16px;
+    border-radius: 24px;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 31.8%;
+}
+
+.title{
+    font: var(--font-h2);
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+
+.img {
+    margin-right: 12px;
+    width: 87px;
+    height: 87px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.button {
+    padding: 8px 46px;
+}
+.buttons {
+    display: flex;
+}
+
+
+@media screen and (max-width: 950px) {
+
+    
+    .smallTestCard{
+        flex: auto;
+        justify-content: space-between;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    .block {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .smallTestCard{
+        flex-direction: column;
+    }
+
+    .img {
+        margin-bottom: 15px;
+    }
+
+    .block {
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+}

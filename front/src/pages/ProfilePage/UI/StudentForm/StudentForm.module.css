@@ -1,0 +1,46 @@
+.ProfileForm {
+    min-width: 662px;
+    position: relative;
+}
+
+.ProfileForm::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 147px;
+    height: 190px;
+    background: url('shared/assets/img/rabbit.png');
+    transform: translateY(-11%);
+}
+
+.button {
+    font: var(--font-h3);
+    font-weight: 500;
+    display: block;
+    border: none;
+    background: none;
+    padding: 0;
+    text-decoration: underline;
+    margin-left: auto;
+}
+.button:hover {
+    background: none;
+    color: var(--main-color);
+}
+
+.row {
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 725px) {
+
+    .ProfileForm{
+        min-width: auto;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+
+}

@@ -1,0 +1,105 @@
+
+
+
+
+.select {
+    align-self: flex-start;
+    font: var(--font-h3);
+    color: var(--main-color);
+    cursor: pointer;
+    min-width: 305px;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+}
+
+
+.icon {
+    fill: var(--main-color);
+    height: 13px;
+    width: 24px;
+    margin-left: 79px;
+    transform: rotate(180deg);
+}
+
+
+
+.select .option:first-child {
+    background: var(--secondary-color);
+    color: var(--main-color);
+    border-radius: 12px;
+}
+
+.select .option:first-child > .icon{
+    fill: var(--main-color);
+    transition: transform 0.2s;
+}
+
+
+.select .option:not(:first-child){
+    display: none;
+}
+
+
+.select.active .option:not(:first-child){
+    display: block;
+}
+
+
+.option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: var(--secondary-color);
+}
+
+.option:hover {
+    background: rgb(238 225 243);
+}
+
+.option > .icon {
+    fill: transparent;
+}
+
+.select.active .option:first-child {
+    background: var(--yellow-color);
+    color: #fff;
+    border-radius: 12px 12px 0 0 ;
+}
+
+.select.active .option:first-child > .icon {
+    display: block;
+    fill: #fff;
+    transform: rotate(0);
+}
+
+
+.option:last-child {
+    border-radius: 0px 0px 12px 12px;
+}
+
+
+
+
+.select > .options {
+    position: relative;
+
+}
+
+.select.active > .options {
+    display: block;
+
+}
+
+
+
+@media screen and (max-width: 950px) {
+    .select {
+        min-width: auto;
+    }
+    
+    
+}

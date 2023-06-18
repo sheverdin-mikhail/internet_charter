@@ -1,1 +1,1 @@
-export {ProgressPage} from './components/ProgressPage/ProgressPage'
+export {ProgressPage} from './UI/ProgressPage/ProgressPage'

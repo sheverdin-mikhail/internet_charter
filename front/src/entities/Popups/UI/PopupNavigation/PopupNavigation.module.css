@@ -1,0 +1,22 @@
+.popupNavigation {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 35px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 905px) {
+    .popupNavigation {
+        padding: 25px 35px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popupNavigation {
+        padding: 20px 35px;
+    }
+}

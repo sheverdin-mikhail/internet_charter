@@ -1,0 +1,12 @@
+.popupBackButton{
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.popupBackButton:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}

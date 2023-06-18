@@ -1,0 +1,45 @@
+
+.signupPopup{
+    min-height: 100vh;
+    position: absolute;
+    justify-content: center;
+    top: 0;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font: var(--font-h1);
+    font-style: 30px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.button {
+    display: block;
+    margin: 30px auto 15px auto;
+}
+
+.text {
+    font: var(--font-h2);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+
+.row:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: text-decoration-color 0.5s ;
+
+}
+
+.link:hover {
+    text-decoration-color: var(--main-color);
+}
+

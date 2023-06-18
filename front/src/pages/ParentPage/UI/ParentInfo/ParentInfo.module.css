@@ -1,0 +1,43 @@
+.parentInfo {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 576px;
+    padding-right: 107px;
+}
+
+.parentInfo::-webkit-scrollbar {
+    width: 14px;
+    border-radius: 24px;
+}
+.parentInfo::-webkit-scrollbar-thumb {
+    border-radius: 24px;
+    background-color: var(--main-color);
+  }
+.parentInfo::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+    border-radius: 24px;
+}
+
+
+.icon{
+    width: 29px;
+    margin-left: 40px;
+    fill: var(--secondary-color);
+}
+
+
+@media screen and (max-width: 820px) {
+
+    .parentInfo {
+        padding-right: 30px;
+    }
+    
+}
+@media screen and (max-width: 450px) {
+
+    .parentInfo {
+        padding-right: 20px;
+    }
+    
+}

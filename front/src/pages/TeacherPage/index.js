@@ -1,1 +1,1 @@
-export {TeacherPage} from './components/TeacherPage/TeacherPage'
+export {TeacherPage} from './UI/TeacherPage/TeacherPage'

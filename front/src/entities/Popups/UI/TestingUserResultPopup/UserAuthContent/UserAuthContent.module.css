@@ -1,0 +1,49 @@
+
+.testResultPopup{
+    align-items: center;
+}
+
+.testResultPopup::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 277px;
+    height: 235px;
+    bottom: 0;
+    left: 0;
+    transform: translate(-80%, 50%);
+    background: url('shared/assets/img/fox.png') center no-repeat;
+}
+
+.button:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.icon {
+    margin: 30px 0;
+    width: 20%;
+}
+
+.text {
+    font: var(--font-h2);
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.title {
+    font: var(--font-h1);
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 650px) {
+    .icon {
+        width: 30%;
+    }
+    
+}
+
+

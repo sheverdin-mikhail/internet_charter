@@ -1,0 +1,30 @@
+.inputWithRadio{
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.input::placeholder
+{
+    color: var(--main-light-color);
+}
+
+
+.input {
+    flex-grow: 1;
+    margin: 0 20px;
+    background: transparent;
+    font: var(--font-h3);
+    color: #fff;
+    width: 100%;
+}
+
+.button {
+    color: var(--main-light-color);
+    background: transparent;
+    font: var(--font-h3);
+}
+
+.button:hover {
+    text-decoration: underline;
+}

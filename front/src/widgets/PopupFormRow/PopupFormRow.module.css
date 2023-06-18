@@ -1,0 +1,34 @@
+.FormInputRow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.label {
+    font: var(--font-h2);
+    font-weight: 500;
+    margin-left: 22px;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+.isError {
+    border: 5px solid var(--error-color);
+    color: var(--error-color) !important;
+}
+
+.isCorrect {
+    border: 5px solid var(--success-color);
+    color: var(--success-color) !important;
+}
+
+.error {
+    text-align: right;
+    font: var(--font-h3);
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-top: 5px;
+    max-width: 95%;
+    align-self: flex-end;
+}

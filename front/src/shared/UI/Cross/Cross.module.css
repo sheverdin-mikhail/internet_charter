@@ -1,0 +1,36 @@
+
+
+
+
+.cross{
+    position: relative;
+}
+.cross,
+.cross::after,
+.cross::before {
+    display: block;
+    cursor: pointer;
+    transition: transform 1s ;
+}
+
+.cross:hover {
+    transform: rotate(90deg);
+}
+
+.cross::before,
+.cross::after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--secondary-color);
+}
+
+.cross::before{
+    transform: translateY(-50%) rotate(45deg);
+}
+.cross::after{
+    transform: translateY(-50%) rotate(-45deg);
+}

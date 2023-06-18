@@ -1,0 +1,28 @@
+.icon {
+    fill: var(--main-color);
+}
+
+.link {
+    margin: 0 15px;
+}
+
+.icon:hover {
+    fill: #F3C301;
+}
+
+.social {
+    margin: 0 -15px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1030px) {
+    .icon {
+        fill: var(--secondary-color);
+    }
+
+    .social {
+        margin-top: 30px;
+    }
+   
+}

@@ -1,0 +1,23 @@
+
+.choseQuestionTypePopup::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 277px;
+    height: 235px;
+    bottom: 0;
+    left: 0;
+    transform: translate(-80%, 50%);
+    background: url('shared/assets/img/fox.png') center no-repeat;
+}
+
+.title {
+    font: var(--font-h1);
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.button:not(:last-child) {
+    margin-bottom: 30px;
+}

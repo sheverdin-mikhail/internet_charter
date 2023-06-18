@@ -1,0 +1,13 @@
+
+
+.title {
+    font: var(--font-h1);
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.description {
+    font: var(--font-h2);
+    color: var(--main-color);
+    margin: 40px 0 50px 0;
+}

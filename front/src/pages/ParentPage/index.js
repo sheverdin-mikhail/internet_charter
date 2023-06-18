@@ -1,2 +1,2 @@
-export { ParentPage }from './components/ParentPage/ParentPage'
+export { ParentPage }from './UI/ParentPage/ParentPage'
 

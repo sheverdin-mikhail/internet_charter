@@ -1,0 +1,23 @@
+
+.resultsPage {
+    padding-bottom: 70px;
+}
+
+.classFilter {
+    margin-top: 30px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+
+}
+
+.table {
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 950px) {
+
+    .filter {
+        width: 100%;
+    }
+    
+}

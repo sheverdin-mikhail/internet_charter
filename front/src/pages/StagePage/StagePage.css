@@ -1,0 +1,56 @@
+
+
+
+.stageInformation h2 {
+    text-align: center;
+    font: var(--font-h1);
+    margin: 30px 0;
+    color: var(--secondary-color);
+
+}
+.stageInformation ul li{
+    list-style-type: disc;
+    margin-bottom: 10px;
+}
+
+.stageInformation ul {
+    padding-left: 15px;
+    margin: 10px 0;
+}
+
+.stageInformation ul, .stageInformation  p {
+    font: var(--font-h3);
+    color: var(--secondary-color);
+}   
+
+.stageInformation p iframe{
+    width: 100%;
+    min-height: 80vh;
+}
+
+.stageInformation {
+    display: block;
+    background: var(--main-color);
+    padding: 50px;
+    border-radius: 23px;
+}
+
+.stagePage {
+    display: flex;
+    flex-direction: column;
+}
+.stagePage .button {
+    align-self: center;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 950px) {
+
+    .stageInformation {
+        display: block;
+        background: var(--main-color);
+        padding: 20px;
+        border-radius: 23px;
+    }
+
+}

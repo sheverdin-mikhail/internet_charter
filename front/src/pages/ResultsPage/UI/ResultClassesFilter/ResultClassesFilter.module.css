@@ -1,0 +1,19 @@
+
+.resultClassesFilter {
+    padding-left: 20px;
+}
+
+.item {
+    font: var(--font-h2);
+    color: var(--disabled-light-color);
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.item:not(:last-child){
+    border-right: 3px solid  var(--disabled-light-color);
+}
+
+.item.active, .item:hover{
+    color: var(--main-color);
+}

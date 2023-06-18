@@ -9,9 +9,19 @@
     color: var(--secondary-color);
     font: var(--font-h1);
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .p{
     color: var(--secondary-color);
     font: var(--font-h2);
+    text-align: justify;
+
+}
+
+
+@media screen and (max-width: 1030px) {
+    .border {
+        padding: 30px 20px 35px 20px;
+    }
 }

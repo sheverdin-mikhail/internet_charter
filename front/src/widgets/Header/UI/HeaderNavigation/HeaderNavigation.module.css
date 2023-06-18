@@ -1,0 +1,39 @@
+.nav{
+    margin: 0 -33px;
+}
+.link {
+    margin: 0 33px;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 1030px) {
+     .nav {
+        width: 100vw;
+        height: calc(110vh - 112px);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        background: var(--main-color);
+        z-index: 100;
+        position: absolute;
+        top: 112px;
+        opacity: 1;
+        left: 0;
+        margin: 0;
+        overflow-y: auto;
+        padding: 0 0 100px 0;
+    }
+
+    
+ 
+    .link {
+        font-size: 32px;
+        color: var(--secondary-color);
+        padding: 20px 30px;
+    } 
+    
+}

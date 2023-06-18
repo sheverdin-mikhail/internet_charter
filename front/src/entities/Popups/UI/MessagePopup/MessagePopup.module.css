@@ -1,0 +1,39 @@
+
+.messagePopup {
+    min-width: auto;
+    flex: none;
+    padding-top: 82px;
+    max-width: 35vw;
+}
+
+.messagePopup::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 277px;
+    height: 235px;
+    bottom: 0;
+    left: 0;
+    transform: translate(-80%, 50%);
+    background: url('shared/assets/img/fox.png') center no-repeat;
+}
+
+.text {
+    font: var(--font-h1);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.button:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 1030px) {
+
+    .messagePopup {
+        max-width: 80vw;
+        padding-bottom: 30px;
+    }
+    
+}

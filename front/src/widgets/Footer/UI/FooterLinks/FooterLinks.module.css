@@ -1,0 +1,17 @@
+.link{
+    margin: 0 10px;
+    opacity: 0.9;
+}
+
+.links{
+    margin: 0 -10px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+    .link {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}

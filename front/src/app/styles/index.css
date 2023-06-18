@@ -1,0 +1,159 @@
+
+
+#root, .App {
+    height: 100%;
+}
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: url('shared/assets/img/bg-line.svg');
+    background-repeat: no-repeat;
+    background-position: 0 80%;
+    background-size: 100%;
+}
+
+.robotBg {
+    background: url('shared/assets/img/not-fond-bg.svg'); 
+    background-repeat: no-repeat;
+    background-position: 0 70%;
+    background-size: contain;
+}
+
+.progressBg {
+    background: url('shared/assets/img/progress-bg-line.svg'); 
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: contain;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+}
+
+.container{ 
+    width: 67.18vw;
+    margin: 0 auto;
+}
+
+
+.popupTitle {
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font: var(--font-h1);
+    font-style: 30px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.popupButton {
+    display: block;
+    margin: 30px auto 15px auto;
+}
+
+.popupText {
+    font: var(--font-h2);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+._mob {
+    display: none !important;
+}
+
+._pc {
+    display: block !important;
+}
+
+
+
+:root{
+
+    /* fonts params */
+    /* -------------------------------------------------------------------------------------------- */
+    --font-family: 'Montserrat', Serif;
+
+
+    --font-size-h1: 26px;
+    --font-line-h1: 120%;
+    --font-weight-h1: 700;
+    --font-h1: var(--font-weight-h1) var(--font-size-h1) / var(--font-line-h1) var(--font-family) ;
+
+    --font-size-h2: 20px;
+    --font-line-h2: 120%;
+    --font-weight-h2: 600;
+    --font-h2: var(--font-weight-h2) var(--font-size-h2) / var(--font-line-h2) var(--font-family) ;
+
+    --font-size-h3: 18px;
+    --font-line-h3: 120%;
+    --font-weight-h3: 600;
+    --font-h3: var(--font-weight-h3) var(--font-size-h3) / var(--font-line-h3) var(--font-family) ;
+/* -------------------------------------------------------------------------------------------------------- */
+
+    /* colors params */
+    --main-color: #480660;
+    --main-light-color: rgba(255, 255, 255, 0.5);
+    --secondary-color: #fff;
+    --pink-color: rgba(72, 6, 96, 0.4);
+    --yellow-color: #F3C301;
+    --disabled-light-color: #C0C0C0;
+    --disabled-dark-color: #706D71;
+
+    --error-color: #F2778D;
+    --success-color: #67BD7F;
+
+
+    --test-card-width: 850px;
+}
+
+
+@media screen and (max-width: 1445px ) {
+    :root{
+        --font-size-h1: 21px;
+        --font-weight-h1: 700;
+
+        --font-size-h2: 15px;
+        --font-weight-h2: 600;
+
+        --font-size-h3: 13px;
+        --font-weight-h3: 600;
+    }
+
+    .container {
+        width: 82vw;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    ._mob {
+        display: block !important;
+    }
+    
+    ._pc {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 910px) {
+    :root {
+        --test-card-width: 100%;
+    }
+}

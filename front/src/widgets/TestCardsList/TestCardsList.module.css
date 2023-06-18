@@ -1,0 +1,23 @@
+.testCardsList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -25px -10px;
+    width: 100%;
+}
+
+.center {
+    justify-content: center;
+}
+
+.card {
+    margin: 25px 8px;
+}
+
+
+@media screen and (max-width: 950px) {
+
+    .testCardsList {
+        margin: 0;
+        flex-direction: column;
+    }
+}

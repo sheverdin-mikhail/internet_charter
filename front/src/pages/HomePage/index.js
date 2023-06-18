@@ -1,1 +1,1 @@
-export {HomePage} from './components/HomePage/HomePage'
+export {HomePage} from './UI/HomePage/HomePage'

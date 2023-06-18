@@ -1,0 +1,10 @@
+.radioAnswers{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.row {
+    margin-bottom: 31px;
+}
+

@@ -1,0 +1,65 @@
+
+.choseTestCategoryPopup {
+    max-width: 1200px;
+    max-height: 70vh;
+}
+
+.choseTestCategoryPopup::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 277px;
+    height: 235px;
+    bottom: 0;
+    left: 0;
+    transform: translate(-35%, 50%);
+    background: url('shared/assets/img/fox.png') center no-repeat;
+}
+
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -15px;
+    margin-top: 50px;
+    overflow: auto;
+
+}
+
+
+.cards::-webkit-scrollbar {
+    width: 8px; /* ширина скроллбара */
+  }
+  
+/* дорожка скроллбара */
+.cards::-webkit-scrollbar-track {
+background-color: var(--main-color); /* белый цвет дорожки */
+}
+
+/* скроллбар */
+.cards::-webkit-scrollbar-thumb {
+background-color: var(--secondary-color); /* основной цвет скролла */
+border-radius: 6px; /* скругление краев */
+}
+
+.card {
+    display: flex;
+    background: var(--secondary-color);    
+    padding: 22px 15px;
+    border-radius: 24px;
+    margin: 0 15px;
+    margin-bottom: 30px;
+    flex: 1 1 50%;
+
+}
+
+.cardText {
+    font: var(--font-h2);
+    flex: 1 1 100%;
+    color: var(--main-color);
+}
+
+.button {
+    border: 3px solid var(--main-color);
+}

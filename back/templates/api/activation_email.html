@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Активация почты</title>
+</head>
+<body>
+    <h1>Активация почты</h1>
+    <p>Добро пожаловать! Пожалуйста, активируйте вашу почту, перейдя по ссылке ниже:</p>
+    <a href="http://{{ domain }}{% url 'verify_email_confirm' uidb64=uid token=token %}">
+        Подтвердить почту!
+    </a>
+    <p>Спасибо!</p>
+</body>
+</html>

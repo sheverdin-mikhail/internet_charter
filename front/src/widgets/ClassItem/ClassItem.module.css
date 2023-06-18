@@ -1,0 +1,141 @@
+.classItem {
+    padding: 30px;
+    background: var(--main-color);
+    width: 65%;
+    border-radius: 20px;
+    color: var(--secondary-color);
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: var(--font-h2);
+    cursor: pointer;
+}
+
+.title.active {
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.body {
+    position: relative;
+    height: 0;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+    z-index: -1;
+}
+
+.body.active {
+    z-index: 1;
+    height: auto;
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+
+.icon {
+    fill: var(--secondary-color);
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+
+}
+
+.icon.active {
+    transform: rotate(0);
+}
+
+
+.buttons {
+    display: flex;
+}
+
+
+.button {
+    border: 3px solid var(--secondary-color);
+    margin: 30px 5px 0 5px
+}
+
+.row {
+    display: flex;   
+    justify-content: space-between;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.information {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    font: var(--font-h2);
+}
+
+.fio {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.login {
+    margin-right: 15px;
+}
+
+.password {
+    margin-right: 20px;
+}
+
+.controlls {
+    display: flex;
+    align-items: center;
+    margin: 0 -7px;
+}
+
+.icon {
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+
+    .classItem {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+
+ 
+    .row {
+        flex-direction:  row;
+        justify-content: space-between;
+    }
+
+    .information {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .information > span {
+        margin-bottom: 15px;
+    }
+
+    .controlls {
+        margin-bottom: 20px;
+        align-self: center;
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+
+ 
+    .row {
+        flex-direction:  column;
+        align-items: flex-start;
+    }
+}
